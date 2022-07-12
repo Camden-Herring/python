@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    /* background-color: black; */
+    justify-content: center;
+    text-align: center;
+}
+
+body{
+    /* display: flex; */
+    justify-content: space-around;
+}
+
+table tr td{
+    height: 50px;
+    width: 50px
+}
+
+
+.color1{
+    background-color: red;
+}
+
+.color2{
+    background-color: black;
+}
+
+div{
+    display: flex;
+    align-items: center;
+}

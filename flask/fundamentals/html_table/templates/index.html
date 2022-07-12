@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html table</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container"></div>
+        <h1 class="text-center text-warning bg-dark">HTML Table</h1>
+
+        <table class="table table-dark text-center">
+            <thead class="thead-light">
+                <tr>
+                    <td scope = "col">First Name</td>
+                    <td scope = "col">Last Name</td>
+                    <td scope = "col">Full Name</td>
+                </tr>
+            </thead>
+            
+            {% for dic in users %}
+                <tr>
+                    <td>{{dic['first_name']}}</td>
+                    <td>{{dic['last_name']}}</td>
+                    <td>{{dic['first_name']}} {{dic['last_name']}}</td>
+                </tr>
+            {% endfor %}
+            
+            
+        </table>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        </div>  
+</body>
+</html>
