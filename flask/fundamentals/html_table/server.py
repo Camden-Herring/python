@@ -1,5 +1,7 @@
 from flask import Flask, render_template
+from static.bs import bootstrap
 app = Flask(__name__)
+
 
 @app.route('/')
 def render_table():
@@ -11,9 +13,7 @@ def render_table():
 ]
 
 
-    return render_template("index.html", users = users)
-
-
+    return render_template("index.html", users = users, **bootstrap)
 
 
 
