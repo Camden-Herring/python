@@ -1,0 +1,81 @@
+    select * from dojos;
+
+    INSERT INTO dojos (dojo_name) 
+    VALUES('dojo-one');
+
+    INSERT INTO dojos (dojo_name) 
+    VALUES('dojo-two');
+
+    INSERT INTO dojos (dojo_name) 
+    VALUES('dojo-three');
+
+-- Creating three dojos ^^
+
+    delete from dojos
+    where id = 3;
+
+    delete from dojos
+    where id = 2;
+
+    delete from dojos
+    where id = 6;
+
+-- deleting the first 3 dojos ^^^
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('camden', 'herring', '18', 4);
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('simon', 'herring', '50', 4);
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('tracy', 'herring', '53', 4);
+
+-- --ninjas that belong to the first dojo ^^
+
+select * from dojos;
+
+select * from ninjas;
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('iain', 'herring', '23', 7);
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('bravin', 'herring', '27', 7);
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('maryn', 'herring', '22', 7);
+
+-- ninjas that belong to the second dojo^^
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('macy', 'miller', '18', 8);
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('colten', 'hinch', '18', 8);
+
+    insert into ninjas (first_name, last_name, age, dojos_id)
+    values ('trey', 'whisner', '18', 8);
+
+-- ninjas that belong to the third dojo^^-- 
+
+select * from ninjas;
+
+select dojos_id from ninjas;
+
+
+    select * from ninjas where dojos_id = 4;
+
+-- selecting all ninjas from the first dojo ^^
+
+    select * from ninjas where dojos_id = 7;
+
+-- selecting all ninjas from the second dojo ^^
+
+    select * from ninjas where dojos_id = 8;
+
+-- selecting all ninjas from the third dojo ^^
+
+    select dojos_id from ninjas order by id desc limit 1;
+
+-- selecting the last ninja's dojo 
