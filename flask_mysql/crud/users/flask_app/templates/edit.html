@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<h1 class="text-center">Update User {{ user.first_name }}</h1>
+{% endblock %}
+
+{% block body %}
+
+<form action="/update/user" method="POST" class="col-7 mx-auto">
+<input type="hidden" name="id" value="{{user.id}}">
+
+    <label for="f_name">First Name: </label>
+    <input type="text" name="f_name" value="{{user.first_name}}" class="form-control">
+
+    <label for="l_name">Last Name: </label>
+    <input type="text" name="l_name" value="{{user.last_name}}" class="form-control">
+
+    <label for="u_email">Email: </label>
+    <input type="text" name="u_email" value="{{user.user_email}}" class="form-control">
+
+    <input type="submit" value="Update User" class="btn btn-primary">
+
+
+</form>
+
+{% endblock %}

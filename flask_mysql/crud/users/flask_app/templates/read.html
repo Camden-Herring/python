@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+<div class="container, text-center">
+    <h1 class="text-primary">All Users</h1>
+</div>
+
+
+
+    <table class="table">
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+            <th scope="col">Email</th>
+            <th scope="col">User Options</th>
+        </tr>
+        {% for user in users %}
+            <tr scope="row">
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.created_at }}</td>
+                <td>{{ user.updated_at }}</td>
+                <td>{{ user.user_email }}</td>
+                    <td>
+                        <a href="/update/user/{{user.id}}">Edit User</a>
+                        <a class="text-danger" href="/delete/user/{{user.id}}">Delete this User</a>
+                        <a href="/user/{{user.id}}">Show this User</a>
+
+                    </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="container, text-center">
+        <a class="link primary" href="create_user">Add a new User</a>
+    </div>
+</div>
+
+{% endblock %}
