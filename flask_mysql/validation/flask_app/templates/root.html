@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+{% block head %}  {% endblock %}
+
+{% block body %}
+
+<h1>Login</h1>
+<form action="" method="POST">
+<!-- <input type="hidden" name = "id" value = "{{ user.id }}"> -->
+
+    <label for="f_name">First Name: </label>
+    <input type="text" name = "f_name">
+
+    <label for="l_name">Last Name: </label>
+    <input type="text" name = "l_name">
+
+    <label for="u_email">Email: </label>
+    <input type="text" name = "u_email">
+
+    <label for="u_password">Password: </label>
+    <input type="password" name = "u_password">
+
+    <label for="confirm_password">Confirm Password: </label>
+    <input type="password" name = "confirm_password">
+
+    <button type="submit">Login</button>
+
+</form>
+
+<h1>Don't have an account? Create one!</h1>
+<form action="">
+
+    <label for="u_email">Email: </label>
+    <input type="text" name = "u_email">
+
+    <label for="u_password">Create a password!</label>
+    <input type="password" name = "u_password">
+
+    <button type="submit">Create User</button>
+    
+</form>
+
+
+{% endblock %}
